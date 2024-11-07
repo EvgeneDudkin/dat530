@@ -3,7 +3,7 @@ function [fire, transition] = tMTProcessor_pre(transition)
 tokenId = tokenAny('pMaintenanceTasks', 1); % select a task
 granted = requestSR({'TechLeadDeveloper', 1}); % request TechLead as a resource
 
-if not(tokenId) || not(granted)
+if not(granted)
     fire = 0; % cannot start working
     return;
 end

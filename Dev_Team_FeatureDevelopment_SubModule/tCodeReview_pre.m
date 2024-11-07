@@ -3,7 +3,7 @@ global global_info;
 
 granted = requestSR({'TechLeadDeveloper', 1, 'TeamLeadDeveloper', 1}); % request TechLead & TeamLead as a resources
 tokenId = tokenAny('pCommitted', 1);
-if not(tokenId) || not(granted)
+if not(granted)
     fire = 0; % cannot start code review
     return;
 end

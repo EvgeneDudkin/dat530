@@ -3,7 +3,7 @@ function [fire, transition] = tTester1_pre(transition)
 tokenId = tokenAny('pToBeTested', 1); % select a task
 granted = requestSR({'Tester1', 1}); % request Tester1 as a resource
 
-if not(tokenId) || not(granted)
+if not(granted)
     fire = 0; % cannot start working
     return;
 end
